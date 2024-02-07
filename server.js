@@ -13,7 +13,7 @@ app.set('view engine', 'ejs');
 app.set('views', path.join(__dirname, 'views'));
 app.use(express.static(path.join(__dirname, 'public')));
 
-app.use(session({
+app.use(session({            
     secret: process.env.SECRET,
     resave: true,
     saveUninitialized: true,
@@ -67,6 +67,6 @@ function checkNotAuthenticated(req, res, next) {
     }
 }
 
-app.listen(3000, () => {
-    console.log("App is on port 3000")
+app.listen(process.env.PORT, () => {
+    console.log("App is on port", process.env.PORT)
 })
