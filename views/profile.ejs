@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Welcome back, <%= displayName %></h1>
+    <div class="profile-container">
+        <img src="<%= photos %>" alt="Profile Picture" class="profile-pic">
+        <p>Email: <%= email %></p>
+    </div>
+
+    <div class="contain">
+        <a href="/dashboard" class="todash anchor">GO TO DASHBOARD</a>
+        <a href="/logout" class="anchor">LOG OUT</a>
+    </div>
+</body>
+</html>
